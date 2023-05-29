@@ -40,7 +40,7 @@ a:hover::before {
   transform-origin: left;
 }*/
 
-link-animation {
+a {
   background-image: linear-gradient(
     to right,
     var(--orange),
@@ -56,7 +56,7 @@ link-animation {
   transition: all 0.3s ease-in-out;
 }
 
-link-animation:before {
+a:before {
   content: '';
   background: var(--orange);
   display: block;
@@ -69,11 +69,11 @@ link-animation:before {
   border-radius: 10px;
 }
 
-link-animation:hover {
+a:hover {
  background-position: 0;
 }
 
-link-animation:hover::before {
+a:hover::before {
   width:100%;
 }
 
