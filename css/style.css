@@ -54,6 +54,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 a:before {
@@ -105,8 +106,8 @@ a:hover::before {
 
 .menu-item {
   text-decoration: none;
-  margin: 0 4px;
-  padding: 0 10px
+  margin: 0 10px;
+  padding: 0 4px;
 }
 
 
