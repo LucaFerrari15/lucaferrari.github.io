@@ -9,6 +9,10 @@
 :root {
   --blue: #4b98ff;
   --orange: #ff5733;
+  --void: #0e0b16;
+  --fuschia: #a239ca;
+  --jewel: #4717f6;
+  --stark: #e7dfdd;
 }
 
 h1{
@@ -18,33 +22,11 @@ h2 {
   font-size: 1.5rem;
 }
 
-/*
-a {
-  position: relative;
-  text-decoration: none;
-}
-
-a::before {
-  background: var(--blue);
-  content: "";
-  inset: 0;
-  position: absolute;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease-in-out;
-  z-index: -1;
-}
-
-a:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}*/
-
-a {
+.link-animation {
   background-image: linear-gradient(
     to right,
-    var(--orange),
-    var(--orange) 50%,
+    var(--jewel),
+    var(--jewel) 50%,
     #000 50%
   );
   background-size: 200% 100%;
@@ -56,9 +38,9 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-a:before {
+.link-animation:before {
   content: '';
-  background: var(--orange);
+  background: var(--jewel);
   display: block;
   position: absolute;
   bottom: -3px;
@@ -66,13 +48,14 @@ a:before {
   width: 0;
   height: 3px;
   transition: all 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
-a:hover {
+.link-animation:hover {
  background-position: 0;
 }
 
-a:hover::before {
+.link-animation:hover::before {
   width:100%;
 }
 
