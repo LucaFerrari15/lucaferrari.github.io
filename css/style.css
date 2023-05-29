@@ -54,7 +54,6 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
-  border-radius: 10px;
 }
 
 a:before {
@@ -67,6 +66,7 @@ a:before {
   width: 0;
   height: 3px;
   transition: all 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 a:hover {
