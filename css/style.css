@@ -65,7 +65,7 @@ h2 {
 
 .navbar {
   height: auto;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   display: flex;
