@@ -10,8 +10,10 @@ const switchTheme = () => {
 function setSVG() {
   if (document.documentElement.getAttribute('data-theme') === 'light') {
     document.getElementById("toggle").style.backgroundImage = "url('../public/brightness-high-fill.svg')";
+    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#fff');
   } else {
     document.getElementById("toggle").style.backgroundImage = "url('../public/moon-stars-fill.svg')";
+    document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#0e0b16');
   }
 }
 
