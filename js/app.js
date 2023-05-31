@@ -7,6 +7,12 @@ const switchTheme = () => {
   setSVG();
 };
 
+function detectDarkMode() {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+}
+
 function setSVG() {
   if (document.documentElement.getAttribute('data-theme') === 'light') {
     document.getElementById("toggle").style.backgroundImage = "url('../public/brightness-high-fill.svg')";
@@ -17,5 +23,6 @@ function setSVG() {
   }
 }
 
+detectDarkMode();
 setSVG();
 document.querySelector('#toggle').addEventListener('click', switchTheme);
