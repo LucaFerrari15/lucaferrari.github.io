@@ -92,8 +92,13 @@ h2 {
   padding: 20px 34px;
 }
 
-.menu {
+.right-menu {
+  display: flex;
+  align-items: center;
   padding: 20px;
+}
+
+.menu {
   display: flex;
   justify-content: center;
   align-items: center;
