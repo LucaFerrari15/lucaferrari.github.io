@@ -4,7 +4,7 @@ const switchTheme = () => {
 
   const newTheme = (dataTheme === 'light') ? 'dark' : 'light';
   rootElem.setAttribute('data-theme', newTheme);
-  setSVG();
+  setSVGandMetaThemeColor();
 };
 
 function detectDarkMode() {
