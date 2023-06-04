@@ -1,11 +1,23 @@
-const switchTheme = () => {
-  const rootElem = document.documentElement;
-  let dataTheme = rootElem.getAttribute('data-theme');
+detectDarkMode();
+setSVGandMetaThemeColor();
+switchTheme();
 
-  const newTheme = (dataTheme === 'light') ? 'dark' : 'light';
-  rootElem.setAttribute('data-theme', newTheme);
-  setSVGandMetaThemeColor();
-};
+
+
+
+
+
+
+function switchTheme() {
+  document.querySelector('#toggle').addEventListener('click', () => {
+    const rootElem = document.documentElement;
+    let dataTheme = rootElem.getAttribute('data-theme');
+  
+    const newTheme = (dataTheme === 'light') ? 'dark' : 'light';
+    rootElem.setAttribute('data-theme', newTheme);
+    setSVGandMetaThemeColor();
+  });
+} 
 
 function detectDarkMode() {
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -23,6 +35,4 @@ function setSVGandMetaThemeColor() {
   }
 }
 
-detectDarkMode();
-setSVGandMetaThemeColor();
-document.querySelector('#toggle').addEventListener('click', switchTheme);
+
